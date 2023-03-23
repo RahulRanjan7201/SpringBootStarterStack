@@ -1,9 +1,19 @@
 package com.springstack01.stackspringboot01.courses.controller;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity //(name="Course")
 public class Courses {
+	@Id
+	@GeneratedValue
 	private long id;
+	//@Column(name="course-name")
 	private String name;
 	private String author;
+	public Courses() {}
 	public Courses(long id, String name, String author) {
 		super();
 		this.id = id;
